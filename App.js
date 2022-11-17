@@ -1,20 +1,54 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from '@react-navigation/native';
+import BlogList from './screens/BlogList';
 
-export default function App() {
+import Blog from './screens/Blog';
+
+const Stack = createStackNavigator();
+
+function NavStack() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+     <Stack.Navigator
+        initialRouteName="BlogList"
+        screenOptions={{
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#008b8b',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle :{
+            fontWeight: 'bold',
+          },
+        }}
+      >
+      <Stack.Screen 
+        name="BlogList" 
+        component={BlogList} 
+        options={{ title: 'Blog List' }}
+      />
+      <Stack.Screen 
+        name="Fullblog" 
+        component={Blog} 
+        options={{ title: 'Full Blog' }}
+      />
+      
+    </Stack.Navigator>
   );
 }
 
+export default function App() {
+  return (
+    <NavigationContainer>
+      <NavStack />
+    </NavigationContainer>
+  );
+}
+
+console.disableYellowBox = true;
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+ 
 });
