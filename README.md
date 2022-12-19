@@ -4,7 +4,7 @@ How to Add a Blog to Your React Native Application with ButterCMS
 ## Important Notice
 This project was created as an example use case of ButterCMS in conjunction with a blog article, [How to Add a Blog to Your React Native Application with ButterCMS](https://buttercms.com/blog/react-native-blog-app/), and will not be actively maintained. 
 
-If you’re interested in exploring the best, most up-to-date way to integrate Butter into [mobile frameworks like ionic], you can check out the following resources:
+If you’re interested in exploring the best, most up-to-date way to integrate Butter into various frameworks, you can check out the following resources:
 
 ### Starter Projects
 
